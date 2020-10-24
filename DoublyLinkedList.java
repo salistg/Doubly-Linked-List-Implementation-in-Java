@@ -1,11 +1,11 @@
+//Java class to implement Doubly Linked List (DLL)
+
 package DataStructures;
 
 public class DoublyLinkedList {
     DLLNode head;
 
-    /**
-     * @param data
-     */
+    //inserting data at the head
     public void insert(int data){
         DLLNode newNode = new DLLNode(data);
 
@@ -19,6 +19,7 @@ public class DoublyLinkedList {
         //System.out.println("value inserted");
     }
 
+    //deleting a certain data from the list
     public void delete(int data){
         if(head==null) return;
         if(head.data==data){
@@ -49,14 +50,17 @@ public class DoublyLinkedList {
 
     }
 
+    //method to check if the list is empty
     public boolean isEmpty(){
         return head==null;
     }
 
+    //method to access the data at the head of the list
     public int accessHead(){
         return head.data;
     }
 
+    //method to access the data at the tail of the list
     public int accessTail(){
         DLLNode node;
         node = head;
@@ -68,7 +72,8 @@ public class DoublyLinkedList {
         }
     }
 
-    public int accessData(int data){
+    //data to find the index of a certain data in the list
+    public int findIndex(int data){
         DLLNode newNode;
         int index = 1;
         int headIndex = 0;
@@ -86,6 +91,7 @@ public class DoublyLinkedList {
         return index;
     }
 
+    //method to change the data in a list to another data
     public void changeData(int oldData, int newData){
         if(head.data==oldData){
             head.data=newData;
@@ -102,6 +108,7 @@ public class DoublyLinkedList {
 
     }
 
+    //check the data which is at a certain index
     public int checkAtIndex(int index){
         if(index==0){
             return head.data;
@@ -119,6 +126,7 @@ public class DoublyLinkedList {
         return 0;
     }
 
+    //printing the data of the list
     public void printData(){
         DLLNode current = head;
         if(head==null){
