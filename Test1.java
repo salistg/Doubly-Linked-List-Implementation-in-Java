@@ -34,7 +34,7 @@ public class Test1 {
 //        System.out.println(list2.isEmpty());
 
         // Printing the data at index 3
-        int index = list.accessData(3);
+        int index = list.findIndex(3);
         System.out.println("The data is at index: " + index);
         System.out.println("The data at the head is: " + list.accessHead());     //printing the data at the head of the list
         System.out.println("The data at the tail is: " + list.accessTail());     //printing the data at the tail of the list
